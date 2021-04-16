@@ -1,0 +1,17 @@
+.buy-car{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 100%;
+  .filter{
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+  }
+  .car-cards{
+    padding: 10px 10px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+}
