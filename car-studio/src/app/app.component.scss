@@ -1,0 +1,32 @@
+.full-screen{
+  display: grid;
+  grid-template-rows: 70px 40px 100%;
+  grid-template-columns: 1fr;
+  // padding: 10px 20px;
+  padding-top: 10px;
+
+  app-header{
+    position: fixed;
+    width: 100%;
+    grid-row: 1/2;
+    grid-column: 1/2;
+
+  }
+
+  app-nav{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    position: fixed;
+    width: 100%;
+    top: 85px;
+
+  }
+
+  app-main-section{
+    grid-row: 3/4;
+    grid-column: 1/2;
+    position: fixed;
+    width: 100%;
+    top: 125px;
+  }
+}
