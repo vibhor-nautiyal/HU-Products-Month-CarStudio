@@ -2,6 +2,7 @@
 .filter-bar{
   height: 450px;
   overflow-y: auto;
+
   h2{
     margin: 10px 0;
     color: #ff5c5c;
@@ -42,4 +43,17 @@
     }
   }
 
+}
+.filter-bar::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+.filter-bar::-webkit-scrollbar-track {
+  background: #eee ;        /* color of the tracking area */
+}
+
+.filter-bar::-webkit-scrollbar-thumb {
+  background-color: #b3b2b252;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  // border: 3px solid orange;  /* creates padding around scroll thumb */
 }
