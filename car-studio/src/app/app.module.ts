@@ -9,6 +9,9 @@ import { MainSectionComponent } from './main-section/main-section.component';
 import { BuyCarComponent } from './buy-car/buy-car.component';
 import { FilterComponent } from './filter/filter.component';
 import { CarCardsComponent } from './car-cards/car-cards.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DisplayCardComponent } from './display-card/display-card.component';
+
 
 @NgModule({
   declarations: [
@@ -18,11 +21,13 @@ import { CarCardsComponent } from './car-cards/car-cards.component';
     MainSectionComponent,
     BuyCarComponent,
     FilterComponent,
-    CarCardsComponent
+    CarCardsComponent,
+    DisplayCardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
