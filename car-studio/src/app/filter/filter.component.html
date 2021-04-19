@@ -103,7 +103,7 @@
     </form>
 
   </div>
-  <button class="accordion" (click)="fuelFilter=!fuelFilter">Filter By Fule Type</button>
+  <button class="accordion" (click)="fuelFilter=!fuelFilter">Filter By Fuel Type</button>
   <div class="panel" [hidden]="fuelFilter">
     <form id='fuel-filter' onsubmit="return false" [formGroup]='fuelChoice' (submit)="fuelSubmit()">
       <input type="checkbox" name="fuel" value="petrol">

@@ -11,6 +11,7 @@ import { FilterComponent } from './filter/filter.component';
 import { CarCardsComponent } from './car-cards/car-cards.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DisplayCardComponent } from './display-card/display-card.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { DisplayCardComponent } from './display-card/display-card.component';
     BuyCarComponent,
     FilterComponent,
     CarCardsComponent,
-    DisplayCardComponent
+    DisplayCardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

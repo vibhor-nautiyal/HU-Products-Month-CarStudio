@@ -1,4 +1,4 @@
-export class carCard{
+export class card{
   image: string;
   name: string;
   price: number;

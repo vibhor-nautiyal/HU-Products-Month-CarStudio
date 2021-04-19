@@ -1,0 +1,43 @@
+.card{
+  display: grid;
+  height: 350px;
+  width: 275px;
+  grid-template-rows: 45% 45% 10%;
+  grid-template-columns: 100%;
+  text-align: center;
+  img{
+    grid-row: 1/2;
+    height: 100;
+    width: 100%;
+  }
+  .details{
+    grid-row: 2/3;
+    display: grid;
+    grid-template-rows: repeat(3,33.3%);
+    .name{
+      font-size: large;
+      grid-row: 1/2;
+    }
+    .year{
+      font-size: small;
+      grid-row: 2/3;
+    }
+    .price{
+      font-size: large;
+      font-weight: bolder;
+      grid-row: 3/4;
+    }
+  }
+  .details-btn{
+    grid-row: 3/4;
+    color: #ff5c5c;
+    border-radius: 25px;
+    border-color: #ff5c5c;
+    width: 80%;
+    text-align: center;
+    &:hover{
+      color: #fff;
+      background-color: #ff5c5c;
+    }
+  }
+}
