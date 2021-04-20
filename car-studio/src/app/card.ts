@@ -3,7 +3,7 @@ export class card{
   name: string;
   price: number;
   year: number;
-
+  //more attributes to be added
   constructor(image:string, name:string, price:number, year:number){
     this.image=image;
     this.name=name;

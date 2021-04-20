@@ -1,6 +1,6 @@
 .full-screen{
   display: grid;
-  grid-template-rows: 70px 40px 100%;
+  grid-template-rows: 70px 40px 450px 165px;
   grid-template-columns: 1fr;
   // padding: 10px 20px;
   padding-top: 10px;
@@ -28,6 +28,14 @@
     position: fixed;
     width: 100%;
     top: 125px;
+  }
+
+  app-footer{
+    grid-row: 4/5;
+    bottom: 0;
+    background-color: #eeeeee;
+    width: 100%;
+    height: 165px;
   }
 
 }

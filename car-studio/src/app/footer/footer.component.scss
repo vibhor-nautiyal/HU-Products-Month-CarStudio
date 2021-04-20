@@ -1,0 +1,50 @@
+footer{
+  padding: 0 20px;
+  .sections{
+    display: flex;
+    justify-content: space-evenly;
+    div{
+      margin: 5px 10px;
+      h2{
+        margin-bottom: 10px;
+      }
+    }
+    .about{
+      flex:40%;
+    }
+    .contact{
+      flex:25%;
+      ul{
+        list-style-type: none;
+        li{
+          div{
+            display: inline-block;
+            background-color: white;
+            width: 20px;
+            text-align: center;
+            a{
+              text-decoration: none;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+    .links{
+      flex:25%;
+      ul{
+        list-style-type: none;
+        li{
+          a{
+            text-decoration: none;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+  .copyright{
+    text-align: center;
+    font-size: small;
+  }
+}
