@@ -1,1 +1,6 @@
-<p>car-cards works!</p>
+<div class="card-container">
+
+  <div *ngFor="let card of cardsArray">
+    <app-display-card [card]='card'></app-display-card>
+  </div>
+</div>
