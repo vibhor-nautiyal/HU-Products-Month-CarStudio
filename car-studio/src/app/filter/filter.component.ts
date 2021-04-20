@@ -164,4 +164,43 @@ export class FilterComponent implements OnInit {
     // runQuery();
   }
 
+  runQuery(){
+
+    //query building for budget
+
+    let budgetQueryArray:string[];
+    for(let i=0;i<this.budgetChoices.length;i++){
+      let curr=this.budgetChoices[i];
+      if(curr.includes('+')){
+        let idx:number=curr.indexOf('+');
+        budgetQueryArray.push("price > "+ curr.substr(0,idx)+"00000")
+      }
+      else{
+        let l_r=this.budgetChoices[i].split("-");
+        budgetQueryArray.push("price between "+l_r[0]+"00000 and "+l_r[1]+"00000");
+      }
+    }
+
+    let budgetQuery:string= budgetQueryArray.join(" or ");
+
+    console.log(budgetQuery);
+
+    //query building for brand
+
+    let brandQueryArray:string[];
+    for(let brand of this.brandChoices){
+      brandQueryArray.push("brand="+brand);
+    }
+
+    let brandQuery:string=brandQueryArray.join(" or ");
+
+    console.log(brandQuery);
+
+    //query building for distance
+
+
+
+
+  }
+
 }

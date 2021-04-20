@@ -3,13 +3,15 @@
   grid-template-rows: 70px 40px 450px 165px;
   grid-template-columns: 1fr;
   // padding: 10px 20px;
-  padding-top: 10px;
+
+  background-color: #ffffff;
 
   app-header{
     position: fixed;
     width: 100%;
     grid-row: 1/2;
     grid-column: 1/2;
+    background-color: #ffffff;
 
   }
 
@@ -18,14 +20,15 @@
     grid-column: 1/2;
     position: fixed;
     width: 100%;
-    top: 85px;
+    top: 75px;
 
+    background-color: #ffffff;
   }
 
   app-main-section{
     grid-row: 3/4;
     grid-column: 1/2;
-    position: fixed;
+    position: static;
     width: 100%;
     top: 125px;
   }
