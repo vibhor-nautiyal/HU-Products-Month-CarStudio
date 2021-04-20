@@ -2,11 +2,10 @@
 .filter-bar{
   height: 450px;
   overflow-y: auto;
-  text-align: center;
   h2{
-    margin: 10px 0;
+    margin: 20px;
     color: #ff5c5c;
-    margin-left: 5px;
+    margin-left: 20px;
   }
   .accordion {
     background-color: #eee;
@@ -17,7 +16,7 @@
     text-align: left;
     border: 1px solid black;
     outline: none;
-    transition: 0.4s;
+    // transition-duration: 0.4s;
   }
 
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -27,7 +26,21 @@
 
   /* Style the accordion panel. Note: hidden by default */
   .panel {
-    padding-left: 10px;
+    // padding-left: 10px;
+    padding: 10px 10px;
+    mat-slider{
+      width: 100%;
+
+    }
+
+    button{
+      margin:15px 0;
+      float:right;
+      background-color: #ff5c5c;
+      width: 50%;
+      height: 40px;
+      border-radius: 20px;
+    }
     form{
       input{
         margin: 15px 0px;
@@ -57,3 +70,4 @@
   border-radius: 20px;       /* roundness of the scroll thumb */
   // border: 3px solid orange;  /* creates padding around scroll thumb */
 }
+

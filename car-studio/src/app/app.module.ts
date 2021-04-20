@@ -9,10 +9,11 @@ import { MainSectionComponent } from './main-section/main-section.component';
 import { BuyCarComponent } from './buy-car/buy-car.component';
 import { FilterComponent } from './filter/filter.component';
 import { CarCardsComponent } from './car-cards/car-cards.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DisplayCardComponent } from './display-card/display-card.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,10 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

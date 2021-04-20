@@ -23,6 +23,8 @@ export class FilterComponent implements OnInit {
 
 
   budgetChoices:string[];
+  budgetValue:number=0;
+  distValue:number=0;
   brandChoices:string[];
   yearChoices:string[];
   distanceChoices:string[];
@@ -97,18 +99,40 @@ export class FilterComponent implements OnInit {
     );
   }
 
-  budgetSubmit(){
-    console.log("inside budgetSubmit");
-    // console.log(this.budgetChoice);
-    let budget=document.querySelectorAll('#budget-filter input[type="checkbox"]:checked');
-    // console.log(budget);
-    this.budgetChoices=[];
-    for(let element of budget as any){
-      console.log(element.defaultValue);
-      this.budgetChoices.push(element.defaultValue);
+  formatLabelForBudget(value: number) {
+    // if (value >= 100000) {
+    //   return Math.round(value / 1000) + 'k';
+    // }
+    if(value==10000000)
+      return '1cr';
+    return Math.floor(value/100000) + 'lac';
+    // return value;
+  }
+
+  formatLabelForDist(value: number) {
+    // if (value >= 100000) {
+    //   return Math.round(value / 1000) + 'k';
+    // }
+    if(value==100000){
+      return "1lac";
     }
+    return (value/1000) +'k';
+  }
+
+  budgetSubmit(){
+    // console.log("inside budgetSubmit");
+    // // console.log(this.budgetChoice);
+    // let budget=document.querySelectorAll('#budget-filter input[type="checkbox"]:checked');
+    // // console.log(budget);
+    // this.budgetChoices=[];
+    // for(let element of budget as any){
+    //   console.log(element.defaultValue);
+    //   this.budgetChoices.push(element.defaultValue);
+    // }
 
     // runQuery();
+    // let buyerBudget:number=this.budgetValue;
+    console.log(this.budgetValue);
 
   }
   brandSubmit(){
@@ -119,23 +143,26 @@ export class FilterComponent implements OnInit {
     this.brandChoices=[];
     for(let element of brand as any){
       console.log(element.defaultValue);
-      this.budgetChoices.push(element.defaultValue);
+      this.brandChoices.push(element.defaultValue);
     }
 
     // runQuery();
   }
   distanceSubmit(){
-    console.log("inside distanceSubmit");
-    // console.log(this.distanceChoice);
-    let distance=document.querySelectorAll('#distance-filter input[type="checkbox"]:checked');
-    // console.log(distance);
-    this.distanceChoices=[];
-    for(let element of distance as any){
-      console.log(element.defaultValue);
-      this.budgetChoices.push(element.defaultValue);
-    }
+    // console.log("inside distanceSubmit");
+    // // console.log(this.distanceChoice);
+    // let distance=document.querySelectorAll('#distance-filter input[type="checkbox"]:checked');
+    // // console.log(distance);
+    // this.distanceChoices=[];
+    // for(let element of distance as any){
+    //   console.log(element.defaultValue);
+    //   this.budgetChoices.push(element.defaultValue);
+    // }
 
     // runQuery();
+
+    console.log(this.distValue);
+
   }
   yearSubmit(){
     console.log("inside yearSubmit");
@@ -145,7 +172,7 @@ export class FilterComponent implements OnInit {
     this.yearChoices=[];
     for(let element of year as any){
       console.log(element.defaultValue);
-      this.budgetChoices.push(element.defaultValue);
+      this.yearChoices.push(element.defaultValue);
     }
 
     // runQuery();
@@ -158,49 +185,12 @@ export class FilterComponent implements OnInit {
     this.fuelChoices=[];
     for(let element of fuel as any){
       console.log(element.defaultValue);
-      this.budgetChoices.push(element.defaultValue);
+      this.fuelChoices.push(element.defaultValue);
     }
 
     // runQuery();
   }
 
-  runQuery(){
 
-    //query building for budget
-
-    let budgetQueryArray:string[];
-    for(let i=0;i<this.budgetChoices.length;i++){
-      let curr=this.budgetChoices[i];
-      if(curr.includes('+')){
-        let idx:number=curr.indexOf('+');
-        budgetQueryArray.push("price > "+ curr.substr(0,idx)+"00000")
-      }
-      else{
-        let l_r=this.budgetChoices[i].split("-");
-        budgetQueryArray.push("price between "+l_r[0]+"00000 and "+l_r[1]+"00000");
-      }
-    }
-
-    let budgetQuery:string= budgetQueryArray.join(" or ");
-
-    console.log(budgetQuery);
-
-    //query building for brand
-
-    let brandQueryArray:string[];
-    for(let brand of this.brandChoices){
-      brandQueryArray.push("brand="+brand);
-    }
-
-    let brandQuery:string=brandQueryArray.join(" or ");
-
-    console.log(brandQuery);
-
-    //query building for distance
-
-
-
-
-  }
 
 }
