@@ -8,7 +8,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class FilterComponent implements OnInit {
 
-  budgetFilter:boolean = true;
+  budgetFilter:boolean = false;
   brandFilter:boolean = true;
   yearFilter:boolean = true;
   distanceFilter:boolean = true;

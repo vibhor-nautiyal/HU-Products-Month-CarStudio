@@ -2,10 +2,11 @@
 .filter-bar{
   height: 450px;
   overflow-y: auto;
-  h2{
+  padding-left: 10px;
+  h3{
     margin: 20px;
     color: #ff5c5c;
-    margin-left: 20px;
+    // margin-left: 20px;
   }
   .accordion {
     background-color: #eee;
@@ -28,6 +29,8 @@
   .panel {
     // padding-left: 10px;
     padding: 10px 10px;
+    // height: auto;
+    // border:1px solid black;
     mat-slider{
       margin-top: 20px;
       width: 100%;
@@ -40,7 +43,8 @@
       background-color: #ff5c5c;
       width: 50%;
       height: 40px;
-      border-radius: 20px;
+      border-radius: 5px;
+      border:none;
     }
     form{
       input{
@@ -52,14 +56,16 @@
         background-color: #ff5c5c;
         width: 50%;
         height: 40px;
-        border-radius: 20px;
+        border-radius: 5px;
+        border:none;
       }
     }
   }
 
 }
 .filter-bar::-webkit-scrollbar {
-  width: 12px;               /* width of the entire scrollbar */
+  // width: 12px;               /* width of the entire scrollbar */
+  display: none;
 }
 
 .filter-bar::-webkit-scrollbar-track {
@@ -72,3 +78,4 @@
   // border: 3px solid orange;  /* creates padding around scroll thumb */
 }
 
+// body ::-webkit-scrollbar {     display: none; }
